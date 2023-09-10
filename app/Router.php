@@ -9,6 +9,7 @@ use controllers\AuthController;
 
 class Router
 {
+
     private $routes = [
       
         '/^\/'  . "\/?$/" => ['controller' => 'HomeController', 'action' => 'index'],
@@ -29,7 +30,8 @@ class Router
         foreach ($this->routes as $pattern => $route) {
        
             if (preg_match($pattern, $uri, $matches)) {
-              
+                print_r("EVERYTHING WORKS PROPERTY");
+                print_r("EVERYTHING WORKS PROPERTY");
                 $controller = 'controllers\\' . $route['controller'];
                 $action = $route['action'] ?? $matches['action'] ?? 'index';
                 $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
