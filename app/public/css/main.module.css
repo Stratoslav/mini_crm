@@ -1,0 +1,72 @@
+.con{
+    display: block;
+ 
+}
+.users-action{
+    display: flex;
+}
+
+.users-tr{
+    border-bottom: 1px solid #858585;
+       
+  
+   padding: 10px 0;
+   margin: 10px 0;
+}
+.user-th, .user-td{
+border-right: 1px solid #7d7d7d;
+    padding-right: 10px;
+}
+.role-tr, .page-tr{
+        border-bottom: 1px solid #b5b5b5;
+}
+.create-user{
+    max-width: 400px;
+        width: 400px;
+}
+.form-control{
+    max-width: 400px;
+    width: 400px;
+}
+.container{
+    display: flex;
+    margin-top: 10px;
+}
+.collapse{
+        text-align: center;
+            justify-content: center;
+           color: #fff;
+}
+.nav-item{
+transition: all 0.3s linear;
+}
+.nav-item:hover{
+color: #d9ff05;
+}
+.navbar-c{
+    background-color: #727272;
+    width: 100%;
+    max-width: 210px;
+align-items: baseline;
+    margin-right: 25px;
+        border-radius: 5px;
+}
+
+.navbar-link{
+        color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: 23px;
+            font-weight: 600;
+            padding-top: 10px;
+text-decoration: none;        
+}
+
+.container-fluid-c{
+    display: block;
+}
+.navbar-nav-c{
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
