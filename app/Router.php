@@ -20,6 +20,7 @@ class Router
         "/^\/pages(\/(?P<action>[a-z]+)(\/(?P<id>\d+))?)?$/" => ['controller' => 'PageController'],
         "/^\/register(\/(?P<action>[a-z]+)(\/(?P<id>\d+))?)?$/" => ['controller' => 'AuthController'],
         "/^\/todos\/category(\/(?P<action>[a-z]+)(\/(?P<id>\d+))?)?$/" => ['controller' => 'todos\\category\\CategoryController'],
+        "/^\/todos\/tasks(\/(?P<action>[a-z]+)(\/(?P<id>\d+))?)?$/" => ['controller' => 'todos\\tasks\\TaskController'],
 
     ];
 

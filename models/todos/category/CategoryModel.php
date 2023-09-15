@@ -8,10 +8,11 @@ use SplMaxHeap;
 class CategoryModel
 {
     private $db;
-
+    private $userId;
     public function __construct()
     {
         $this->db = Database::getInstance()->getConnection();
+          $this->userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
         try {
             $res = $this->db->query("SELECT 1 FROM `todo_category` LIMIT 1");
         } catch (\PDOException $e) {
@@ -43,9 +44,9 @@ class CategoryModel
     {
 
 
-        $stmt = $this->db->prepare("SELECT * FROM `todo_category`");
+        $stmt = $this->db->prepare("SELECT * FROM `todo_category` WHERE user = ?");
         try {
-            $stmt->execute();
+            $stmt->execute([$this->userId]);
             $todo_category = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             return $todo_category;
         } catch (\PDOException $e) {
